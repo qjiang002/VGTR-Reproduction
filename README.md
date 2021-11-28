@@ -1,7 +1,7 @@
 # VGTR Reproduction
-A reproduction of Visual Grounding with Transformers \
+A reproduction of Visual Grounding with Transformers
 
-This repository contains the code for [**TransVG**](https://arxiv.org/abs/2104.08541) and a reproduction of [**Visual Grounding with Transformers**](https://arxiv.org/pdf/2105.04281.pdf). \
+This repository contains the code for [**TransVG**](https://arxiv.org/abs/2104.08541) and a reproduction of [**Visual Grounding with Transformers**](https://arxiv.org/pdf/2105.04281.pdf).
 
 For TransVG's official repo and instructions, please refer to [README_TransVG.md](./README_TransVG.md) or [official repository](https://github.com/djiajunustc/TransVG)
 
@@ -37,7 +37,7 @@ running script
 ```
 CUDA_VISIBLE_DEVICES=3 python train.py --model_enc_vis vgtr --lr_resnet 1e-4 --vgtr_visual_out_dim 256 --lr_bilstm 1e-4 --model_enc_lang vgtr --bilstm_hidden_dim 512 --embedding_dim 256 --bilstm_layers 4 --bilstm_out_dim 4 --bilstm_dropout 0.3 --hidden_dim 256 --enc_layers 2 --dec_layers 2 --pre_norm --model_name vgtr --optimizer adamw --lr_scheduler vgtr_decay --output_dir ./outputs/VGTR2 --dataset unc --dataset_fraction 0.25 2>&1 | tee outputs/VGTR2/training.log
 ```
-The training log is stored at outputs/VGTR2/log.txt and outputs/VGTR3/log.txt. The training loss is decreasing and the validation accuracy fluctuates around 0.1 in VGTR2 and keeps decreasing in VGTR3. \
+The training log is stored at outputs/VGTR2/log.txt and outputs/VGTR3/log.txt. The training loss is decreasing and the validation accuracy fluctuates around 0.1 in VGTR2 and keeps decreasing in VGTR3.
 
 If there is anyone interested in VGTR reproduction or having answers to the above problems, I'm more than happy to communicate. 
 
